@@ -1,0 +1,28 @@
+<h3><a class="btn btn-secondary" href="/library"><i class="fa fa-plus"></i> Create New</a> Library Database</h3>
+<table class="table table-striped" >
+    <thead>
+        <tr>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>Domain of the Book</th>
+            <th>Year of Publishing</th>
+            <th>Book Availability</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.bookName}}</td>
+            <td>{{this.author}}</td>
+            <td>{{this.bdomain}}</td>
+            <td>{{this.yob}}</td>
+            <td>{{this.bookA}}</td>
+            <td>
+                <a href="/library/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/library/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
